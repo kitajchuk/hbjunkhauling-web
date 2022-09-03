@@ -1,0 +1,28 @@
+{
+  "name": "hbjunkhauling-web",
+  "version": "0.0.1",
+  "description": "Website for HB Junk Hauling",
+  "private": true,
+  "scripts": {
+    "start": "npm run dev",
+    "predev": "rm -rf ./_site",
+    "dev": "npx @11ty/eleventy --serve",
+    "prebuild": "rm -rf ./_site",
+    "build": "npx @11ty/eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kitajchuk/hbjunkhauling-web.git"
+  },
+  "contributors": [
+    {
+      "name": "Brandon Lee Kitajchuk",
+      "email": "bk@kitajchuk.com",
+      "url": "https://www.kitajchuk.com"
+    }
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.2"
+  }
+}

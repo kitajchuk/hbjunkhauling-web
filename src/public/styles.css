@@ -1,0 +1,240 @@
+/** Reset
+  http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/** Fonts */
+@font-face {
+  font-family: "HK-Grotesk-Regular";
+  src: url( "/fonts/HK-Grotesk-Regular.woff" ) format( "woff" );
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HK-Grotesk-Semibold";
+  src: url( "/fonts/HK-Grotesk-Semibold.woff" ) format( "woff" );
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HK-Grotesk-Bold";
+  src: url( "/fonts/HK-Grotesk-Bold.woff" ) format( "woff" );
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Balboa-ExtraCondensed";
+  src: url( "/fonts/Balboa-ExtraCondensed.woff" ) format( "woff" );
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
+
+/** Root */
+:root {
+  --black: #000;
+  --white: #fff;
+  --yellow: #F1C813;
+  --gold: #A99A0D;
+  --pink: #F1136E;
+  --blueLight: #138DF1;
+  --blueDark: #0D63A9;
+
+  --pad00: 8px;
+  --pad01: 16px;
+  --pad02: 32px;
+  --btnRad: 4px;
+}
+html,
+body {
+  font-family: "HK-Grotesk-Regular";
+  font-stretch: normal;
+  font-style: normal;
+}
+h1 {
+  font-family: "HK-Grotesk-Bold";
+  font-size: 4rem;
+}
+
+/** Styles: Nav */
+nav {
+  display: flex;
+  align-items: center;
+  padding: var(--pad01);
+}
+nav a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--black);
+}
+nav a img {
+  height: 64px;
+  width: auto;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  font-family: "Balboa-ExtraCondensed";
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-left: var(--pad02);
+}
+nav ul a {
+  position: relative;
+}
+nav ul a.active:after {
+  content: "";
+  width: calc(100% + var(--pad00));
+  height: 2px;
+  background-color: var(--black);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+nav ul li + li {
+  margin-left: var(--pad01);
+}
+nav ul + a {
+  margin-left: auto;
+  margin-right: var(--pad02);
+  color: var(--blueDark);
+}
+
+/** Styles: Buttons */
+.btn {
+  border-radius: var(--btnRad);
+  background-color: var(--blueLight);
+  color: var(--white);
+  font-family: "Balboa-ExtraCondensed";
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1;
+  padding: var(--pad00) var(--pad01);
+  display: inline-block;
+  text-decoration: none;
+}
+.btn svg {
+  width: 18px;
+  height: 18px;
+  margin-left: var(--pad00);
+}
+.btn svg, .btn span {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+/** Styles: Hero */
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 41.6666667vw;
+  min-height: 600px;
+  padding: 0 var(--pad02);
+}
+.hero:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-image: url("/images/noise.png");
+  background-repeat: repeat;
+  z-index: 2;
+}
+.hero:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url("/images/noise.png");
+  background-repeat: repeat;
+  z-index: 2;
+}
+.hero img {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+.hero div {
+  z-index: 3;
+  text-align: center;
+}
+.hero h1 {
+  color: var(--white);
+  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  max-width: 832px;
+  margin-bottom: var(--pad02);
+}
+
+/** Styles: Media */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  .hero h1 {
+    max-width: 640px;
+  }
+}

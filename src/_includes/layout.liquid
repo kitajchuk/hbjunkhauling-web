@@ -5,13 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="Junk removal service made simple for you. Our reliable hauling service will remove unwanted items and provide you with more space. Free estimates serving the Eugene Springfield and surrounding area." />
-    <link rel="apple-touch-icon" href="/logo192.png" />
+    <link rel="apple-touch-icon" href="/icon192.png" />
     <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <!-- <link rel="icon" href="/favicon.svg" type="image/svg+xml" /> -->
+    <title>{% if title %}{{ title }} | {% endif %}HB Junk Hauling</title>
     <link rel="stylesheet" href="/styles.css" />
-    <title>HB Junk Hauling</title>
   </head>
-  <body>
-    {{ content }}
+  <body class="{{ class }}">
+    <nav>
+      <a href="/" title="HB Junk Hauling">
+        <img src="/images/hblogo-text.png" width="603" height="373" alt="HB Junk Hauling" />
+      </a>
+      <ul>
+        <li>
+          <a href="/about/" class="{% if class == 'about' %}active{% endif %}">
+            About Us
+          </a>
+        </li>
+        <li>
+          <a href="/services/"class="{% if class == 'services' %}active{% endif %}">
+            Our Services
+          </a>
+        </li>
+      </ul>
+      <a href="https://www.facebook.com/hbjunkhauling" title="HB Junk Hauling on Facebook">
+        {% render "svg/facebook.svg" %}
+      </a>
+      <a href="tel:+15415139867" title="Call Now" class="btn">
+        <span>Contact Us</span>
+        {% render "svg/phone-call.svg" %}
+      </a>
+    </nav>
+    <main>
+      {{ content }}
+    </main>
+    <footer>
+
+    </footer>
   </body>
 </html>

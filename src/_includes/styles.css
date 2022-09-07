@@ -241,13 +241,13 @@ nav a.tel {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 41.6666667vw;
+  height: 42vw;
   padding: 0 var(--pad02);
   color: var(--white);
   text-align: center;
 }
 .hero--vets {
-  height: 60vw;
+  height: 52vw;
 }
 .hero:after {
   content: "";
@@ -423,6 +423,15 @@ footer > div {
 }
 
 /** Styles: Media */
+@media (min-width: 1792px) {
+  .hero {
+    max-height: 600px;
+  }
+
+  .hero--vets {
+    max-height: 800px;
+  }
+}
 @media (max-width: 1024px) {
   h1 {
     font-size: 3rem;

@@ -153,6 +153,10 @@ nav {
   display: flex;
   align-items: center;
   padding: var(--pad01);
+  position: sticky;
+  background-color: rgba(255, 255, 255, 0.9);
+  top: 0;
+  z-index: 10;
 }
 nav a {
   display: inline-block;
@@ -193,10 +197,10 @@ nav ul + a {
   margin-right: var(--pad02);
   color: var(--blueDark);
 }
-/* nav button {
-  margin-left: auto;
+nav a.tel {
   display: none;
-} */
+  color: var(--blueDark);
+}
 
 /** Styles: Buttons */
 .btn {
@@ -282,6 +286,9 @@ nav ul + a {
 }
 .hero h1 + *, .hero h4 * + * {
   margin-top: var(--pad02);
+}
+.hero .btn {
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
 }
 
 /** Styles: Mast */
@@ -478,30 +485,29 @@ footer > div {
     line-height: 2rem;
   }
 
+  nav ul {
+    font-size: 1.25rem;
+    margin-left: var(--pad01);
+  }
+
+  nav ul li + li {
+    margin-left: var(--pad01);
+  }
+
   nav a img {
-    height: 48px;
+    height: 40px;
   }
 
   nav .btn {
     display: none;
   }
 
-  nav ul + a {
-    margin-right: 0;
-  }
-
-  /* nav button {
+  nav a.tel {
     display: block;
-    cursor: pointer;
-  } */
-
-  nav button svg, nav button span {
-    display: inline-block;
-    vertical-align: middle;
   }
 
-  nav button svg {
-    margin-right: var(--pad00);
+  nav ul + a {
+    margin-right: var(--pad01);
   }
 
   .hero {

@@ -3,6 +3,12 @@
   <head>
     {% render "metadata", slug: slug %}
     <title>{% if title %}{{ title }} | {% endif %}HB Junk Hauling</title>
+    {% capture styles %}
+      {% render "styles.css" %}
+    {% endcapture %}
+    <style>
+      {{ styles | cssmin }}
+    </style>
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body class="{{ class }}">

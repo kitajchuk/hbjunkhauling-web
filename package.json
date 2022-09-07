@@ -24,6 +24,7 @@
   "license": "MIT",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.2",
-    "clean-css": "^5.3.1"
+    "clean-css": "^5.3.1",
+    "html-minifier": "^4.0.0"
   }
 }

@@ -1,13 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Junk removal service made simple for you. Our reliable hauling service will remove unwanted items and provide you with more space. Free estimates serving the Eugene Springfield and surrounding area." />
-    <link rel="apple-touch-icon" href="/icon192.png" />
-    <link rel="icon" href="/favicon.ico" sizes="any" />
-    <!-- <link rel="icon" href="/favicon.svg" type="image/svg+xml" /> -->
+    {% render "metadata", slug: slug %}
     <title>{% if title %}{{ title }} | {% endif %}HB Junk Hauling</title>
     <link rel="stylesheet" href="/styles.css" />
   </head>
@@ -18,12 +12,12 @@
       </a>
       <ul>
         <li>
-          <a href="/about/" class="{% if class == 'about' %}active{% endif %}">
+          <a href="/about-us/" class="{% if slug == 'about-us' %}active{% endif %}">
             About Us
           </a>
         </li>
         <li>
-          <a href="/services/"class="{% if class == 'services' %}active{% endif %}">
+          <a href="/our-services/"class="{% if slug == 'our-services' %}active{% endif %}">
             Our Services
           </a>
         </li>
@@ -35,22 +29,22 @@
         <span>Contact Us</span>
         {% render "svg/phone-call.svg" %}
       </a>
-      <button type="button">
+      <!-- <button type="button">
         {% render "svg/menu.svg" %}
         <span>Menu</span>
-      </button>
+      </button> -->
     </nav>
     <main>
       {{ content }}
     </main>
     <footer>
-      <p>With HB Junk Hauling there are no hidden fees.</p>
-      <p>Our prices include mileage, loading, labor and disposal fees.</p>
-      <p>Call us today and schedule a free, no-obligation estimate!</p>
-      <p><a href="tel:+15415139867">(541) 513-9867</a></p>
-      <p>
-        <em>Shawn and Marla Langley</em>
-      </p>
+      <div>
+        <p>With HB Junk Hauling there are no hidden fees. Our prices include mileage, loading, labor and disposal fees. Call us today and schedule a free, no-obligation estimate!</p>
+        <p><a href="tel:+15415139867">(541) 513-9867</a></p>
+        <p>
+          <em>Shawn and Marla Langley</em>
+        </p>
+      </div>
     </footer>
   </body>
 </html>

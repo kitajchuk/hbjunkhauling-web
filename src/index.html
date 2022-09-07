@@ -1,12 +1,17 @@
 ---
 layout: layout.liquid
 class: home
+slug: ""
 ---
 
 <section class="hero">
   <img src="/images/hbhero-home.jpg" width="2500" height="1670" alt="" />
   <div>
     <h1>We&rsquo;re the junk removal team you&rsquo;re looking for!</h1>
+    <a href="tel:+15415139867" title="Call Now" class="btn">
+      <span>Call Us Today</span>
+      {% render "svg/phone-call.svg" %}
+    </a>
   </div>
 </section>
 
@@ -37,12 +42,13 @@ class: home
 </section>
 
 <section class="lock">
+  <div class="lock__txt">
+    <div class="fh fhh">Customer satisfaction guaranteed</div>
+    <h3>Quick efficient and friendly service is our continuous goal.</h3>
+  </div>
   <div class="lock__img">
     <div>
       <img src="/images/hbshawn-home.jpg" loading="lazy" width="" height="" alt="" />
     </div>
-  </div>
-  <div class="lock__txt">
-    <h3>Customer satisfaction <em>guaranteed</em>. Quick efficient and friendly service is our continuous goal.</h3>
   </div>
 </section>

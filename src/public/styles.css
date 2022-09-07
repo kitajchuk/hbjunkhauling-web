@@ -121,7 +121,7 @@ h4 {
   line-height: 2.5rem;
 }
 p {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 2rem;
 }
 em {
@@ -143,6 +143,9 @@ button {
   text-transform: uppercase;
   letter-spacing: 0.5px;
   line-height: 2.215rem;
+}
+.fhh {
+  font-size: 2rem;
 }
 
 /** Styles: Nav */
@@ -183,17 +186,17 @@ nav ul a.active:after {
   transform: translate3d(-50%, -50%, 0);
 }
 nav ul li + li {
-  margin-left: var(--pad01);
+  margin-left: var(--pad02);
 }
 nav ul + a {
   margin-left: auto;
   margin-right: var(--pad02);
   color: var(--blueDark);
 }
-nav button {
+/* nav button {
   margin-left: auto;
   display: none;
-}
+} */
 
 /** Styles: Buttons */
 .btn {
@@ -225,8 +228,14 @@ nav button {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 41.6666667vw;
   padding: 0 var(--pad02);
+  color: var(--white);
+  text-align: center;
+}
+.hero--vets {
+  height: 50vw;
 }
 .hero:after {
   content: "";
@@ -265,12 +274,14 @@ nav button {
   z-index: 3;
   text-align: center;
 }
-.hero h1 {
-  color: var(--white);
-  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
-  text-align: center;
+.hero > div {
   max-width: 832px;
-  margin-bottom: var(--pad02);
+}
+.hero h1, .hero h4 {
+  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+}
+.hero h1 + *, .hero h4 * + * {
+  margin-top: var(--pad02);
 }
 
 /** Styles: Mast */
@@ -282,6 +293,24 @@ nav button {
 }
 .mast h2 {
   max-width: 772px;
+}
+
+/** Styles: Sec */
+.sec {
+  padding: var(--pad03) var(--pad02);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.sec + .sec {
+  padding-top: 0;
+}
+.sec > * {
+  max-width: 640px;
+}
+.sec > * + * {
+  margin-top: var(--pad02);
 }
 
 /** Styles: Services */
@@ -308,15 +337,27 @@ nav button {
   align-items: center;
   justify-content: center;
 }
+.lock__txt {
+  max-width: 540px;
+  margin-left: var(--pad02);
+  order: 2;
+}
+.lock__txt .fhh {
+  color: var(--gold);
+  margin-bottom: var(--pad02);
+}
 .lock__img {
   width: 100%;
   max-width: 525px;
 }
-.lock__img div {
+.lock__img > img {
+  width: 100%;
+}
+.lock__img > div {
   padding-bottom: 108%;
   position: relative;
 }
-.lock__img img {
+.lock__img > div img {
   position: absolute;
   left: 0;
   top: 0;
@@ -324,9 +365,28 @@ nav button {
   height: 100%;
   object-fit: cover;
 }
-.lock__txt {
-  max-width: 630px;
-  margin-left: var(--pad02);
+
+/** Styles: Banner */
+.banner {
+  padding: var(--pad04) var(--pad02);
+  background-color: var(--blueDark);
+  color: var(--yellow);
+  text-align: center;
+}
+.banner h3 {
+  margin-bottom: var(--pad02);
+}
+.banner p + p {
+  margin-top: var(--pad01);
+}
+
+/** Styles: About */
+.about .fhh {
+  text-align: center;
+  margin-top: var(--pad03);
+}
+.about .lock__txt p + p {
+  margin-top: var(--pad02);
 }
 
 /** Styles: Footer */
@@ -335,6 +395,8 @@ footer {
   color: var(--white);
   text-align: center;
   padding: var(--pad04) var(--pad02);
+  display: flex;
+  justify-content: center;
 }
 footer a {
   color: var(--yellow);
@@ -344,8 +406,11 @@ footer p {
   font-size: 1rem;
   line-height: 1.75rem;
 }
-footer p:nth-child(4) {
+footer p:nth-child(2) {
   margin: var(--pad02) 0;
+}
+footer > div {
+  max-width: 435px;
 }
 
 /** Styles: Media */
@@ -379,23 +444,56 @@ footer p:nth-child(4) {
     height: 60vw;
   }
 
-  .hero h1 {
+  .hero > div {
     max-width: 640px;
   }
 
   .mast h2 {
     max-width: 560px;
   }
+
+  .lock {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .lock__txt {
+    margin-bottom: var(--pad02);
+    margin-left: 0;
+    order: 1;
+  }
+
+  .lock__img {
+    order: 2;
+  }
 }
 @media (max-width: 640px) {
-  nav ul, nav ul + a, nav .btn {
+  h1 {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  nav a img {
+    height: 48px;
+  }
+
+  nav .btn {
     display: none;
   }
 
-  nav button {
+  nav ul + a {
+    margin-right: 0;
+  }
+
+  /* nav button {
     display: block;
     cursor: pointer;
-  }
+  } */
 
   nav button svg, nav button span {
     display: inline-block;

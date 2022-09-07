@@ -136,6 +136,14 @@ button {
   line-height: 1;
 }
 
+/** Styles: Pads */
+.pad {
+  padding: var(--pad03) var(--pad02);
+}
+.pad2 {
+  padding: var(--pad04) var(--pad02);
+}
+
 /** Styles: Type */
 .fh {
   font-family: "Balboa-ExtraCondensed";
@@ -239,7 +247,7 @@ nav a.tel {
   text-align: center;
 }
 .hero--vets {
-  height: 50vw;
+  height: 60vw;
 }
 .hero:after {
   content: "";
@@ -293,7 +301,6 @@ nav a.tel {
 
 /** Styles: Mast */
 .mast {
-  padding: var(--pad03) var(--pad02);
   display: flex;
   justify-content: center;
   text-align: center;
@@ -304,7 +311,6 @@ nav a.tel {
 
 /** Styles: Sec */
 .sec {
-  padding: var(--pad03) var(--pad02);
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -325,7 +331,6 @@ nav a.tel {
   background-color: var(--black);
   color: var(--white);
   text-align: center;
-  padding: var(--pad04) var(--pad02);
 }
 .svcs > :first-child {
   margin-bottom: var(--pad02);
@@ -339,7 +344,6 @@ nav a.tel {
 
 /** Styles: Lock */
 .lock {
-  padding: var(--pad04) var(--pad02);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -375,7 +379,6 @@ nav a.tel {
 
 /** Styles: Banner */
 .banner {
-  padding: var(--pad04) var(--pad02);
   background-color: var(--blueDark);
   color: var(--yellow);
   text-align: center;
@@ -388,11 +391,11 @@ nav a.tel {
 }
 
 /** Styles: About */
-.about .fhh {
+.bio .fhh {
   text-align: center;
-  margin-top: var(--pad03);
+  margin-bottom: var(--pad02);
 }
-.about .lock__txt p + p {
+.bio .lock__txt p + p {
   margin-top: var(--pad02);
 }
 
@@ -401,7 +404,6 @@ footer {
   background-color: var(--black);
   color: var(--white);
   text-align: center;
-  padding: var(--pad04) var(--pad02);
   display: flex;
   justify-content: center;
 }
@@ -429,7 +431,7 @@ footer > div {
 
   h2 {
     font-size: 2rem;
-    line-height: 3rem;
+    line-height: 2.75rem;
   }
 
   h3 {
@@ -477,12 +479,16 @@ footer > div {
 @media (max-width: 640px) {
   h1 {
     font-size: 2rem;
-    line-height: 3rem;
+    line-height: 2.75rem;
   }
 
   h2 {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .fhh {
+    font-size: 1.5rem;
   }
 
   nav ul {
@@ -517,5 +523,11 @@ footer > div {
 @media (max-width: 480px) {
   .hero {
     height: 100vw;
+  }
+
+  .hero--vets {
+    height: auto;
+    padding-top: var(--pad03);
+    padding-bottom: var(--pad03);
   }
 }

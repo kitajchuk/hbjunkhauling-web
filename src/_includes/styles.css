@@ -93,30 +93,36 @@ table {
   --pad03: 64px;
   --pad04: 90px;
   --btnRad: 4px;
+
+  --fontNarrow: "Balboa-ExtraCondensed", "Arial Narrow", Arial, sans-serif;
+  /* --fontNarrow: "Balboa-ExtraCondensed", Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif; */
+  --fontRegular:  "HK-Grotesk-Regular", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
+  --fontSemibold: "HK-Grotesk-Semibold", "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
+  --fontBold: "HK-Grotesk-Bold", "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
 }
 html,
 body {
-  font-family: "HK-Grotesk-Regular";
+  font-family: var(--fontRegular);
   font-stretch: normal;
   font-style: normal;
 }
 h1 {
-  font-family: "HK-Grotesk-Bold";
+  font-family: var(--fontBold);
   font-size: 4rem;
   line-height: 4.8125rem;
 }
 h2 {
-  font-family: "HK-Grotesk-Semibold";
+  font-family: var(--fontSemibold);
   font-size: 3rem;
   line-height: 3.75rem;
 }
 h3 {
-  font-family: "HK-Grotesk-Semibold";
+  font-family: var(--fontSemibold);
   font-size: 2.5rem;
   line-height: 3.25rem;
 }
 h4 {
-  font-family: "HK-Grotesk-Semibold";
+  font-family: var(--fontSemibold);
   font-size: 2rem;
   line-height: 2.5rem;
 }
@@ -146,7 +152,7 @@ button {
 
 /** Styles: Type */
 .fh {
-  font-family: "Balboa-ExtraCondensed";
+  font-family: var(--fontNarrow);
   font-size: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -178,7 +184,7 @@ nav a img {
 nav ul {
   display: flex;
   align-items: center;
-  font-family: "Balboa-ExtraCondensed";
+  font-family: var(--fontNarrow);
   font-size: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -215,7 +221,7 @@ nav a.tel {
   border-radius: var(--btnRad);
   background-color: var(--blueLight);
   color: var(--white);
-  font-family: "Balboa-ExtraCondensed";
+  font-family: var(--fontNarrow);
   font-size: 1.25rem;
   text-transform: uppercase;
   letter-spacing: 1px;

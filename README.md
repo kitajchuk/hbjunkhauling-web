@@ -6,3 +6,5 @@
 </p>
 
 > Website for HB Junk Hauling
+
+A static site using [eleventy](https://www.11ty.dev/) and the [liquid](https://shopify.github.io/liquid/) template language.

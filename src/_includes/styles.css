@@ -47,36 +47,6 @@ table {
 	border-spacing: 0;
 }
 
-/** Fonts */
-@font-face {
-  font-family: "HK-Grotesk-Regular";
-  src: url( "/fonts/HK-Grotesk-Regular.woff" ) format( "woff" );
-  font-style: normal;
-  font-stretch: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "HK-Grotesk-Semibold";
-  src: url( "/fonts/HK-Grotesk-Semibold.woff" ) format( "woff" );
-  font-style: normal;
-  font-stretch: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "HK-Grotesk-Bold";
-  src: url( "/fonts/HK-Grotesk-Bold.woff" ) format( "woff" );
-  font-style: normal;
-  font-stretch: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Balboa-ExtraCondensed";
-  src: url( "/fonts/Balboa-ExtraCondensed.woff" ) format( "woff" );
-  font-style: normal;
-  font-stretch: normal;
-  font-display: swap;
-}
-
 /** Root */
 :root {
   --black: #000;
@@ -94,35 +64,37 @@ table {
   --pad04: 90px;
   --btnRad: 4px;
 
-  --fontNarrow: "Balboa-ExtraCondensed", "Arial Narrow", Arial, sans-serif;
-  /* --fontNarrow: "Balboa-ExtraCondensed", Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif; */
-  --fontRegular:  "HK-Grotesk-Regular", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
-  --fontSemibold: "HK-Grotesk-Semibold", "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
-  --fontBold: "HK-Grotesk-Bold", "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
+  --fontDisplay: "Six Caps", sans-serif;
+  --fontStandard: "Sen", sans-serif;
 }
 html,
 body {
-  font-family: var(--fontRegular);
+  font-family: var(--fontStandard);
+  font-weight: 400;
   font-stretch: normal;
   font-style: normal;
 }
 h1 {
-  font-family: var(--fontBold);
+  font-family: var(--fontStandard);
+  font-weight: 700;
   font-size: 4rem;
   line-height: 4.8125rem;
 }
 h2 {
-  font-family: var(--fontSemibold);
+  font-family: var(--fontStandard);
+  font-weight: 700;
   font-size: 3rem;
   line-height: 3.75rem;
 }
 h3 {
-  font-family: var(--fontSemibold);
+  font-family: var(--fontStandard);
+  font-weight: 700;
   font-size: 2.5rem;
   line-height: 3.25rem;
 }
 h4 {
-  font-family: var(--fontSemibold);
+  font-family: var(--fontStandard);
+  font-weight: 700;
   font-size: 2rem;
   line-height: 2.5rem;
 }
@@ -152,7 +124,8 @@ button {
 
 /** Styles: Type */
 .fh {
-  font-family: var(--fontNarrow);
+  font-family: var(--fontDisplay);
+  font-weight: 400;
   font-size: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -182,12 +155,13 @@ nav a img {
   width: auto;
 }
 nav ul {
-  display: flex;
-  align-items: center;
-  font-family: var(--fontNarrow);
+  font-family: var(--fontDisplay);
+  font-weight: 400;
   font-size: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
   margin-left: var(--pad02);
 }
 nav ul a {
@@ -218,15 +192,16 @@ nav a.tel {
 
 /** Styles: Buttons */
 .btn {
-  border-radius: var(--btnRad);
-  background-color: var(--blueLight);
-  color: var(--white);
-  font-family: var(--fontNarrow);
+  font-family: var(--fontDisplay);
+  font-weight: 400;
   font-size: 1.25rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   line-height: 1;
-  padding: var(--pad00) var(--pad01);
+  border-radius: var(--btnRad);
+  background-color: var(--blueLight);
+  color: var(--white);
+  padding: var(--pad00) var(--pad01) calc(var(--pad00) + 2px);
   display: inline-block;
   text-decoration: none;
 }
@@ -293,7 +268,7 @@ nav a.tel {
   text-align: center;
 }
 .hero > div {
-  max-width: 832px;
+  max-width: 900px;
 }
 .hero h1, .hero h4 {
   text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
@@ -312,7 +287,7 @@ nav a.tel {
   text-align: center;
 }
 .mast h2 {
-  max-width: 772px;
+  max-width: 830px;
 }
 
 /** Styles: Sec */
@@ -337,6 +312,12 @@ nav a.tel {
   background-color: var(--black);
   color: var(--white);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.svcs p {
+  max-width: 580px;
 }
 .svcs > :first-child {
   margin-bottom: var(--pad02);

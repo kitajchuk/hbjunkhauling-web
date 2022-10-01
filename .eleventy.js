@@ -22,7 +22,6 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({ "src/public/favicon*": "." });
   eleventyConfig.addPassthroughCopy({ "src/public/icon*.png": "." });
-  eleventyConfig.addPassthroughCopy({ "src/public/fonts": "fonts" });
   eleventyConfig.addPassthroughCopy({ "src/public/images": "images" });
   eleventyConfig.addPassthroughCopy({ "src/public/manifest.json": "manifest.json" });
 

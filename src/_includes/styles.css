@@ -1,5 +1,5 @@
 /** Reset
-  http://meyerweb.com/eric/tools/css/reset/ 
+  http://meyerweb.com/eric/tools/css/reset/
   v2.0 | 20110126
   License: none (public domain)
 */
@@ -145,7 +145,7 @@ table {
   --pad04: 90px;
   --btnRad: 4px;
 
-  --fontDisplay: "Six Caps", sans-serif;
+  --fontDisplay: "Big Shoulders Display", sans-serif;
   --fontStandard: "Sen", sans-serif;
 }
 html,
@@ -209,7 +209,6 @@ button {
   font-weight: 400;
   font-size: 1.5rem;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
   line-height: 2.215rem;
 }
 .fhh {
@@ -238,9 +237,8 @@ nav a img {
 nav ul {
   font-family: var(--fontDisplay);
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
   display: flex;
   align-items: center;
   margin-left: var(--pad02);
@@ -275,26 +273,22 @@ nav a.tel {
 .btn {
   font-family: var(--fontDisplay);
   font-weight: 400;
-  font-size: 1.25rem;
+  font-size: 1rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
   line-height: 1;
   border-radius: var(--btnRad);
   background-color: var(--blueLight);
   color: var(--white);
-  padding: var(--pad00) var(--pad01) calc(var(--pad00) + 2px);
-  display: inline-block;
+  padding: var(--pad00) var(--pad01);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--pad00);
   text-decoration: none;
+  letter-spacing: 0.5px;
 }
 .btn svg {
   width: 18px;
   height: 18px;
-  margin-left: var(--pad00);
-}
-.btn svg,
-.btn span {
-  vertical-align: middle;
-  display: inline-block;
 }
 
 /** Styles: Hero */
@@ -572,7 +566,7 @@ footer > div {
   }
 
   nav ul {
-    font-size: 1.25rem;
+    font-size: 1rem;
     margin-left: var(--pad01);
   }
 

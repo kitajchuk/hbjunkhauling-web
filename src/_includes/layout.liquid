@@ -9,7 +9,7 @@
     <style>
       {{ styles | cssmin }}
     </style>
-    {% render "gtm" %}
+    {% render "gtm", site: site %}
   </head>
   <body class="{{ class }}">
     <nav>

@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const CleanCSS = require("clean-css");
 const htmlmin = require("html-minifier");
 

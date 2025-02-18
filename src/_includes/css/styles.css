@@ -145,8 +145,8 @@ table {
   --pad04: 90px;
   --btnRad: 4px;
 
-  --fontDisplay: "Big Shoulders Display", sans-serif;
-  --fontStandard: "Sen", sans-serif;
+  --fontDisplay: "Bebas Neue", sans-serif;
+  --fontStandard: "Hanken Grotesk", sans-serif;
 }
 html,
 body {
@@ -163,19 +163,19 @@ h1 {
 }
 h2 {
   font-family: var(--fontStandard);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 3rem;
   line-height: 3.75rem;
 }
 h3 {
   font-family: var(--fontStandard);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 2.5rem;
   line-height: 3.25rem;
 }
 h4 {
   font-family: var(--fontStandard);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 2rem;
   line-height: 2.5rem;
 }
@@ -219,6 +219,7 @@ button {
 nav {
   display: flex;
   align-items: center;
+  gap: var(--pad02);
   padding: var(--pad01);
   position: sticky;
   background-color: rgba(255, 255, 255, 0.9);
@@ -241,7 +242,7 @@ nav ul {
   text-transform: uppercase;
   display: flex;
   align-items: center;
-  margin-left: var(--pad02);
+  gap: var(--pad02);
 }
 nav ul a {
   position: relative;
@@ -256,12 +257,8 @@ nav ul a.active:after {
   top: 50%;
   transform: translate3d(-50%, -50%, 0);
 }
-nav ul li + li {
-  margin-left: var(--pad02);
-}
 nav ul + a {
   margin-left: auto;
-  margin-right: var(--pad02);
   color: var(--blueDark);
 }
 nav a.tel {
@@ -273,7 +270,7 @@ nav a.tel {
 .btn {
   font-family: var(--fontDisplay);
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.25rem;
   text-transform: uppercase;
   line-height: 1;
   border-radius: var(--btnRad);
@@ -289,6 +286,9 @@ nav a.tel {
 .btn svg {
   width: 18px;
   height: 18px;
+}
+.btn span {
+  transform: translateY(1px);
 }
 
 /** Styles: Hero */
@@ -565,13 +565,13 @@ footer > div {
     font-size: 1.5rem;
   }
 
-  nav ul {
-    font-size: 1rem;
-    margin-left: var(--pad01);
+  nav {
+    gap: var(--pad01);
   }
 
-  nav ul li + li {
-    margin-left: var(--pad01);
+  nav ul {
+    font-size: 1rem;
+    gap: var(--pad01);
   }
 
   nav a img {
@@ -584,10 +584,6 @@ footer > div {
 
   nav a.tel {
     display: block;
-  }
-
-  nav ul + a {
-    margin-right: var(--pad01);
   }
 
   .hero {

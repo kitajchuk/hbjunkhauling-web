@@ -5,16 +5,13 @@ class: our-services
 slug: our-services
 ---
 
-<section class="hero">
-  <img src="/images/hbhero-services.jpg" width="2500" height="3300" alt="" />
-  <div>
-    <h1>Don&rsquo;t get in a funk, let us remove your junk!</h1>
-    <a href="tel:+15415139867" title="Call Now" class="btn">
-      <span>Call Us Today</span>
-      {% render "svg/phone-call.svg" %}
-    </a>
-  </div>
-</section>
+{%
+  render "hero",
+  src: "/images/hbhero-services.jpg",
+  width: "2500",
+  height: "3300",
+  title: "Don&rsquo;t get in a funk, let us remove your junk!"
+%}
 
 <section class="sec pad">
   <h3>Residential and Commercial</h3>

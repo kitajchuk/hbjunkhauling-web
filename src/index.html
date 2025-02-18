@@ -5,16 +5,13 @@ class: home
 slug: ""
 ---
 
-<section class="hero">
-  <img src="/images/hbhero-home.jpg" width="2500" height="1670" alt="" />
-  <div>
-    <h1>We&rsquo;re the junk removal team you&rsquo;re looking for!</h1>
-    <a href="tel:+15415139867" title="Call Now" class="btn">
-      <span>Call Us Today</span>
-      {% render "svg/phone-call.svg" %}
-    </a>
-  </div>
-</section>
+{%
+  render "hero",
+  src: "/images/hbhero-home.jpg",
+  width: "2500",
+  height: "1670",
+  title: "We&rsquo;re the junk removal team you&rsquo;re looking for!"
+%}
 
 <section class="mast pad">
   <h2>Let <em>us</em> pick up your unwanted items and remove your worries!</h2>

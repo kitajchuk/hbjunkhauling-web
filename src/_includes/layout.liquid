@@ -4,7 +4,7 @@
     {% render "metadata", slug: slug %}
     <title>{% if title %}{{ title }} | {% endif %}HB Junk Hauling</title>
     {% capture styles %}
-      {% render "styles.css" %}
+      {% render "css/styles.css" %}
     {% endcapture %}
     <style>
       {{ styles | cssmin }}
@@ -12,7 +12,7 @@
     {% render "gtm", site: site %}
   </head>
   <body class="{{ class }}">
-    <nav>
+    <nav aria-label="Main navigation">
       <a href="/" title="HB Junk Hauling">
         <img src="/images/hblogo-text.png" width="603" height="373" alt="HB Junk Hauling" />
       </a>
@@ -31,10 +31,7 @@
       <a href="https://www.facebook.com/hbjunkhauling" title="HB Junk Hauling on Facebook" target="_blank">
         {% render "svg/facebook.svg" %}
       </a>
-      <a href="tel:+15415139867" title="Call Now" class="btn">
-        <span>Contact Us</span>
-        {% render "svg/phone-call.svg" %}
-      </a>
+      {% render "call_btn", text: "Contact Us" %}
       <a href="tel:+15415139867" title="Call Now" class="tel">
         {% render "svg/phone-call.svg" %}
       </a>

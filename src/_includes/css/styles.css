@@ -132,6 +132,7 @@ table {
 :root {
   --black: #000;
   --white: #fff;
+  --grey: #ccc;
   --yellow: #f1c813;
   --gold: #a99a0d;
   --pink: #f1136e;
@@ -225,6 +226,7 @@ nav {
   background-color: rgba(255, 255, 255, 0.9);
   top: 0;
   z-index: 10;
+  border-bottom: 1px solid var(--grey);
 }
 nav a {
   display: inline-block;
@@ -421,6 +423,9 @@ nav a.tel {
 .lock__txt .fhh {
   color: var(--gold);
   margin-bottom: var(--pad02);
+}
+.lock__txt .btn {
+  margin-top: var(--pad02);
 }
 .lock__img {
   width: 100%;

@@ -4,12 +4,13 @@
   "description": "Website for HB Junk Hauling",
   "private": true,
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "husky",
     "start": "netlify dev",
     "predev": "rm -rf ./_site",
     "dev": "npx @11ty/eleventy --serve",
     "prebuild": "rm -rf ./_site",
-    "build": "npx @11ty/eleventy"
+    "build": "npx @11ty/eleventy",
+    "makewebp": "node scripts/webp.js"
   },
   "repository": {
     "type": "git",
@@ -23,15 +24,17 @@
     }
   ],
   "license": "MIT",
+  "type": "module",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.2",
-    "clean-css": "^5.3.1",
+    "@11ty/eleventy": "^3.0.0",
+    "clean-css": "^5.3.3",
     "dotenv": "^16.4.7",
-    "html-minifier": "^4.0.0",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.2.2",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
     "prettier": "^3.5.0",
-    "prettier-plugin-toml": "^2.0.2"
+    "prettier-plugin-toml": "^2.0.2",
+    "sharp": "^0.33.5",
+    "shelljs": "^0.9.2"
   },
   "lint-staged": {
     "*.{ts,js,css,toml,md,json}": "prettier --write"

@@ -1,7 +1,12 @@
 <section class="hero">
-  <img src="{{ src }}" width="{{ width }}" height="{{ height }}" alt="" />
+  <img
+    src="{{ src }}"
+    width="{{ width }}"
+    height="{{ height }}"
+    alt="" />
   <div>
     <h1>{{ title }}</h1>
-    {% render "call_btn", text: "Call Us Today" %}
+    {% render "call_btn"
+      , text: "Call Us Today" %}
   </div>
 </section>

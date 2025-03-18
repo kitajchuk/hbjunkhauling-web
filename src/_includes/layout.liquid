@@ -1,38 +1,62 @@
+{% assign slug = page.url | remove_first: "/" | remove_last: "/" | split: "/" | first %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    {% render "metadata", slug: slug %}
-    <title>{% if title %}{{ title }} | {% endif %}HB Junk Hauling</title>
+    {% render "metadata"
+      , slug: slug %}
+    <title>
+      {% if title %}
+        {{ title }} |
+      {% endif %}HB Junk Hauling</title>
     {% capture styles %}
+      {% render "css/google-fonts.css" %}
       {% render "css/styles.css" %}
     {% endcapture %}
     <style>
       {{ styles | cssmin }}
     </style>
-    {% render "gtm", site: site %}
   </head>
   <body class="{{ class }}">
     <nav aria-label="Main navigation">
-      <a href="/" title="HB Junk Hauling">
-        <img src="/images/hblogo-text.png" width="603" height="373" alt="HB Junk Hauling" />
+      <a
+        href="/"
+        title="HB Junk Hauling"
+        {% if page.url == '/' %}
+        aria-current="page"
+        {% endif %}>
+        <img
+          src="/images/hblogo-text.webp"
+          width="603"
+          height="373"
+          alt="HB Junk Hauling" />
       </a>
       <ul>
-        <li>
-          <a href="/about-us/" class="{% if slug == 'about-us' %}active{% endif %}">
-            About Us
-          </a>
-        </li>
-        <li>
-          <a href="/our-services/"class="{% if slug == 'our-services' %}active{% endif %}">
-            Our Services
-          </a>
-        </li>
+        {% for item in navi %}
+          <li>
+            <a
+              href="/{{ item.slug }}/"
+              {% if slug == item.slug %}
+              class="active"
+              aria-current="page"
+              {% endif %}>
+              {{ item.label }}
+            </a>
+          </li>
+        {% endfor %}
       </ul>
-      <a href="https://www.facebook.com/hbjunkhauling" title="HB Junk Hauling on Facebook" target="_blank">
+      <a
+        href="https://www.facebook.com/hbjunkhauling"
+        title="HB Junk Hauling on Facebook"
+        target="_blank">
         {% render "svg/facebook.svg" %}
       </a>
-      {% render "call_btn", text: "Contact Us" %}
-      <a href="tel:+15415139867" title="Call Now" class="tel">
+      {% render "call_btn"
+        , text: "Contact Us" %}
+      <a
+        href="tel:+15415139867"
+        title="Call Now"
+        class="tel">
         {% render "svg/phone-call.svg" %}
       </a>
     </nav>
@@ -42,11 +66,15 @@
     <footer class="pad2">
       <div>
         <p>With HB Junk Hauling there are no hidden fees. Our prices include mileage, loading, labor and disposal fees. Call us today and schedule a free, no-obligation estimate!</p>
-        <p><a href="tel:+15415139867">(541) 513-9867</a></p>
+        <p>
+          <a href="tel:+15415139867">(541) 513-9867</a>
+        </p>
         <p>
           <em>Shawn and Marla Langley</em>
         </p>
       </div>
     </footer>
+    {% render "gtm"
+      , site: site %}
   </body>
 </html>
